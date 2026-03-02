@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - FoodFusion</title>
+    <meta name="description" content="Sign in to your FoodFusion account to access your saved recipes, join cooking events, and connect with our culinary community.">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body class="auth-page">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <i class="fas fa-utensils"></i>
+                    <span>FoodFusion</span>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="recipes.html" class="nav-link">Recipes</a>
+                </li>
+                <li class="nav-item">
+                    <a href="community.html" class="nav-link">Community</a>
+                </li>
+                <li class="nav-item">
+                    <a href="resources.html" class="nav-link">Resources</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a href="login.html" class="nav-link login-btn active">Login</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Login Section -->
+    <section class="auth-section">
+        <div class="auth-container">
+            <div class="auth-content">
+                <div class="auth-header">
+                    <h1>Welcome Back</h1>
+                    <p>Sign in to your FoodFusion account to continue your culinary journey</p>
+                </div>
+
+                <!-- Account Lockout Alert -->
+                <div id="lockoutAlert" class="alert alert-warning" style="display: none;">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <div class="alert-content">
+                        <strong>Account Temporarily Locked</strong>
+                        <p>Too many failed login attempts. Please try again in <span id="lockoutTime">3:00</span> minutes.</p>
+                    </div>
+                </div>
+
+                <form id="loginForm" class="auth-form">
+                    <div class="form-group">
+                        <label for="loginEmail">Email Address</label>
+                        <div class="input-group">
+                            <i class="fas fa-envelope"></i>
+                            <input type="email" id="loginEmail" name="email" placeholder="Enter your email" required>
+                        </div>
+                        <span class="error-message"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="loginPassword">Password</label>
+                        <div class="input-group">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" id="loginPassword" name="password" placeholder="Enter your password" required>
+                            <button type="button" class="password-toggle" id="togglePassword">
+                                <i class="far fa-eye"></i>
+                            </button>
+                        </div>
+                        <span class="error-message"></span>
+                    </div>
+
+                    <div class="form-options">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="rememberMe" name="rememberMe">
+                            <span class="checkmark"></span>
+                            Remember me
+                        </label>
+                        <a href="#" class="forgot-password" id="forgotPasswordLink">Forgot Password?</a>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-full btn-large">
+                        <span class="btn-text">Sign In</span>
+                        <span class="btn-loading" style="display: none;">
+                            <i class="fas fa-spinner fa-spin"></i> Signing In...
+                        </span>
+                    </button>
+
+                    <div class="login-attempts" id="loginAttempts" style="display: none;">
+                        <p>Login attempts: <span id="attemptCount">0</span>/3</p>
+                    </div>
+                </form>
+
+                <div class="auth-divider">
+                    <span>or</span>
+                </div>
+
+                <div class="social-login">
+                    <button class="btn btn-social btn-google">
+                        <i class="fab fa-google"></i>
+                        Continue with Google
+                    </button>
+                    <button class="btn btn-social btn-facebook">
+                        <i class="fab fa-facebook-f"></i>
+                        Continue with Facebook
+                    </button>
+                </div>
+
+                <div class="auth-footer">
+                    <p>Don't have an account? <a href="register.html" class="auth-link">Create Account</a></p>
+                </div>
+            </div>
+
+            <div class="auth-image">
+                <div class="auth-pattern"></div>
+                <div class="auth-content-overlay">
+                    <h2>Join Our Culinary Community</h2>
+                    <p>Connect with fellow food enthusiasts, share your recipes, and discover new flavors from around the world.</p>
+                    <div class="feature-list">
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Access to exclusive recipes</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Participate in cooking events</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Save your favorite recipes</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Connect with expert chefs</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Forgot Password Modal -->
+    <div id="forgotPasswordModal" class="modal-overlay">
+        <div class="modal-content forgot-password-modal">
+            <button class="modal-close" id="closeForgotPassword">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-header">
+                <h2>Reset Your Password</h2>
+                <p>Enter your email address and we'll send you a link to reset your password.</p>
+            </div>
+            <form id="forgotPasswordForm">
+                <div class="form-group">
+                    <label for="resetEmail">Email Address</label>
+                    <div class="input-group">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="resetEmail" name="resetEmail" placeholder="Enter your email" required>
+                    </div>
+                    <span class="error-message"></span>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary" id="cancelReset">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Send Reset Link</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal-overlay">
+        <div class="modal-content success-modal">
+            <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2>Welcome Back!</h2>
+            <p>You have successfully signed in to your FoodFusion account.</p>
+            <button class="btn btn-primary" id="closeSuccessModal">Continue</button>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/auth.js"></script>
+    <script>
+        // Login page specific functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Password visibility toggle
+            const togglePassword = document.getElementById('togglePassword');
+            const passwordInput = document.getElementById('loginPassword');
+            
+            togglePassword.addEventListener('click', function() {
+                const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+                passwordInput.setAttribute('type', type);
+                
+                const icon = this.querySelector('i');
+                if (type === 'password') {
+                    icon.classList.remove('fa-eye-slash');
+                    icon.classList.add('fa-eye');
+                } else {
+                    icon.classList.remove('fa-eye');
+                    icon.classList.add('fa-eye-slash');
+                }
+            });
+
+            // Forgot password modal
+            const forgotPasswordLink = document.getElementById('forgotPasswordLink');
+            const forgotPasswordModal = document.getElementById('forgotPasswordModal');
+            const closeForgotPassword = document.getElementById('closeForgotPassword');
+            const cancelReset = document.getElementById('cancelReset');
+
+            forgotPasswordLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                forgotPasswordModal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+
+            function closeForgotModal() {
+                forgotPasswordModal.classList.remove('active');
+                document.body.style.overflow = '';
+                document.getElementById('forgotPasswordForm').reset();
+            }
+
+            closeForgotPassword.addEventListener('click', closeForgotModal);
+            cancelReset.addEventListener('click', closeForgotModal);
+
+            // Forgot password form submission
+            document.getElementById('forgotPasswordForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                const email = document.getElementById('resetEmail').value;
+                
+                // Simulate sending reset email
+                alert('Password reset link sent to: ' + email);
+                closeForgotModal();
+            });
+
+            // Social login buttons
+            document.querySelector('.btn-google').addEventListener('click', function() {
+                alert('Google OAuth integration would be implemented here');
+            });
+
+            document.querySelector('.btn-facebook').addEventListener('click', function() {
+                alert('Facebook OAuth integration would be implemented here');
+            });
+
+            // Success modal close
+            document.getElementById('closeSuccessModal').addEventListener('click', function() {
+                document.getElementById('successModal').classList.remove('active');
+                document.body.style.overflow = '';
+                // Redirect to dashboard or previous page
+                window.location.href = 'index.html';
+            });
+        });
+    </script>
+</body>
+</html>

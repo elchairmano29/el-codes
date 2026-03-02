@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Cookbook - FoodFusion</title>
+    <meta name="description" content="Join our collaborative community cookbook where members share their favorite recipes, cooking tips, and culinary experiences with the FoodFusion community.">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <i class="fas fa-utensils"></i>
+                    <span>FoodFusion</span>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="recipes.html" class="nav-link">Recipes</a>
+                </li>
+                <li class="nav-item">
+                    <a href="community.html" class="nav-link active">Community</a>
+                </li>
+                <li class="nav-item">
+                    <a href="resources.html" class="nav-link">Resources</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a href="login.html" class="nav-link login-btn">Login</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Community Cookbook</h1>
+            <p class="page-subtitle">Share your culinary creations with fellow food enthusiasts</p>
+        </div>
+    </section>
+
+    <!-- Community Stats -->
+    <section class="community-stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-number">8,450</div>
+                        <div class="stat-label">Active Contributors</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-number">3,200</div>
+                        <div class="stat-label">Community Recipes</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-number">15,600</div>
+                        <div class="stat-label">Recipe Reviews</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-number">4.8</div>
+                        <div class="stat-label">Average Rating</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br>
+
+    <!-- Share Recipe Section -->
+    <section class="share-recipe">
+        <div class="container">
+            <div class="share-header" style="text-align: center;">
+                <h2>Share Your Recipe</h2>
+                <p>Contribute to our community cookbook and inspire fellow food enthusiasts</p>
+                <button class="btn btn-primary btn-large" id="shareRecipeBtn">
+                    <i class="fas fa-plus"></i> Share a Recipe
+                </button>
+            </div>
+        </div>
+    </section>
+<br>
+    <!-- Featured Community Recipes -->
+    <section class="community-recipes">
+        <div class="container">
+            <div class="section-header">
+                <h2 style="text-align: center;">Featured Community Recipes</h2>
+                <div class="recipe-filters">
+                    <button class="filter-btn active btn btn-outline" data-filter="recent">Most Recent</button>
+                    <button class="filter-btn btn btn-outline" data-filter="popular">Most Popular</button>
+                    <button class="filter-btn btn btn-outline" data-filter="trending">Trending</button>
+                    <button class="filter-btn btn btn-outline" data-filter="featured">Staff Picks</button>
+                </div>
+            </div>
+            <br>
+            <div class="recipe-grid community-grid">
+                <div class="recipe-card community-recipe">
+                    <div class="recipe-image">
+                        <div class="placeholder-image">
+                            <i class="fas fa-pizza-slice"></i>
+                        </div>
+                        <div class="recipe-badge community">Community</div>
+                        <button class="recipe-favorite">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                    <div class="recipe-content">
+                        <div class="recipe-meta">
+                            <span class="recipe-difficulty beginner">Beginner</span>
+                            <span class="recipe-time"><i class="fas fa-clock"></i> 30 min</span>
+                        </div>
+                        <h3>Grandma's Secret Lasagna</h3>
+                        <p>A family recipe passed down through generations, featuring layers of rich meat sauce, creamy bechamel, and perfectly melted cheese.</p>
+                        <div class="recipe-tags">
+                            <span class="tag">Italian</span>
+                            <span class="tag">Comfort Food</span>
+                            <span class="tag">Family Recipe</span>
+                        </div>
+                        <div class="community-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="author-info">
+                                <span class="author-name">Maria Gonzalez</span>
+                                <span class="author-level">Master Chef</span>
+                            </div>
+                            <div class="recipe-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span>4.9 (124)</span>
+                            </div>
+                        </div>
+                        <div class="recipe-engagement">
+                            <button class="btn">
+                                <i class="fas fa-thumbs-up"></i>
+                                <span>89</span>
+                            </button>
+                            <button class="btn">
+                                <i class="fas fa-comment"></i>
+                                <span>23</span>
+                            </button>
+                            <button class="btn">
+                                <i class="fas fa-share"></i>
+                                <span>12</span>
+                            </button>
+                        </div>
+                        <br>
+                        <button class="btn btn-primary btn-full">Try This Recipe</button>
+                    </div>
+                </div>
+
+                <div class="recipe-card community-recipe">
+                    <div class="recipe-image">
+                        <div class="placeholder-image">
+                            <i class="fas fa-cookie"></i>
+                        </div>
+                        <div class="recipe-badge trending">Trending</div>
+                        <button class="recipe-favorite">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                    <div class="recipe-content">
+                        <div class="recipe-meta">
+                            <span class="recipe-difficulty intermediate">Intermediate</span>
+                            <span class="recipe-time"><i class="fas fa-clock"></i> 2 hours</span>
+                        </div>
+                        <h3>Lavender Honey Shortbread</h3>
+                        <p>Delicate shortbread cookies infused with culinary lavender and local honey, perfect for afternoon tea or elegant gatherings.</p>
+                        <div class="recipe-tags">
+                            <span class="tag">Dessert</span>
+                            <span class="tag">Floral</span>
+                            <span class="tag">Elegant</span>
+                        </div>
+                        <div class="community-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="author-info">
+                                <span class="author-name">Sophie Chen</span>
+                                <span class="author-level">Pastry Expert</span>
+                            </div>
+                            <div class="recipe-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <span>4.7 (67)</span>
+                            </div>
+                        </div>
+                        <div class="recipe-engagement">
+                            <button class="btn">
+                                <i class="fas fa-thumbs-up"></i>
+                                <span>156</span>
+                            </button>
+                            <button class="btn">
+                                <i class="fas fa-comment"></i>
+                                <span>34</span>
+                            </button>
+                            <button class="btn">
+                                <i class="fas fa-share"></i>
+                                <span>28</span>
+                            </button>
+                        </div>
+                        <br>
+                        <button class="btn btn-primary btn-full">Try This Recipe</button>
+                    </div>
+                </div>
+
+                <div class="recipe-card community-recipe">
+                    <div class="recipe-image">
+                        <div class="placeholder-image">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                        <div class="recipe-badge staff-pick">Staff Pick</div>
+                        <button class="recipe-favorite">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                    <div class="recipe-content">
+                        <div class="recipe-meta">
+                            <span class="recipe-difficulty beginner">Beginner</span>
+                            <span class="recipe-time"><i class="fas fa-clock"></i> 15 min</span>
+                        </div>
+                        <h3>Rainbow Buddha Bowl</h3>
+                        <p>Vibrant and nutritious bowl packed with colorful vegetables, quinoa, and a creamy tahini dressing that brings it all together.</p>
+                        <div class="recipe-tags">
+                            <span class="tag">Vegan</span>
+                            <span class="tag">Healthy</span>
+                            <span class="tag">Colorful</span>
+                        </div>
+                        <div class="community-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="author-info">
+                                <span class="author-name">Alex Rivera</span>
+                                <span class="author-level">Health Enthusiast</span>
+                            </div>
+                            <div class="recipe-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span>4.8 (203)</span>
+                            </div>
+                        </div>
+                        <div class="recipe-engagement">
+                            <button class="btn">
+                                <i class="fas fa-thumbs-up"></i>
+                                <span>245</span>
+                            </button>
+                            <button class="btn">
+                                <i class="fas fa-comment"></i>
+                                <span>67</span>
+                            </button>
+                            <button class="btn">
+                                <i class="fas fa-share"></i>
+                                <span>43</span>
+                            </button>
+                        </div>
+                        <br>
+                        <button class="btn btn-primary btn-full">Try This Recipe</button>
+                    </div>
+                </div>
+
+                <div class="recipe-card community-recipe">
+                    <div class="recipe-image">
+                        <div class="placeholder-image">
+                            <i class="fas fa-fish"></i>
+                        </div>
+                        <button class="recipe-favorite">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                    <div class="recipe-content">
+                        <div class="recipe-meta">
+                            <span class="recipe-difficulty advanced">Advanced</span>
+                            <span class="recipe-time"><i class="fas fa-clock"></i> 1 hour</span>
+                        </div>
+                        <h3>Miso-Glazed Black Cod</h3>
+                        <p>Restaurant-quality dish featuring tender black cod with a complex miso glaze, served with pickled vegetables and jasmine rice.</p>
+                        <div class="recipe-tags">
+                            <span class="tag">Japanese</span>
+                            <span class="tag">Seafood</span>
+                            <span class="tag">Gourmet</span>
+                        </div>
+                        <div class="community-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="author-info">
+                                <span class="author-name">Kenji Yamamoto</span>
+                                <span class="author-level">Professional Chef</span>
+                            </div>
+                            <div class="recipe-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span>4.9 (89)</span>
+                            </div>
+                        </div>
+                        <div class="recipe-engagement">
+                            <button class="btn">
+                                <i class="fas fa-thumbs-up"></i>
+                                <span>167</span>
+                            </button>
+                            <button class="btn">
+                                <i class="fas fa-comment"></i>
+                                <span>45</span>
+                            </button>
+                            <button class="btn">
+                                <i class="fas fa-share"></i>
+                                <span>31</span>
+                            </button>
+                        </div>
+                        <br>
+                        <button class="btn btn-primary btn-full">Try This Recipe</button>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="load-more-section">
+                <button class="btn btn-outline btn-large" id="loadMoreCommunityRecipes">
+                    Discover More Community Recipes
+                    <i class="fas fa-arrow-down"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+<br>
+    <!-- Cooking Tips Section -->
+    <section class="cooking-tips">
+        <h3 style="text-align: center;">Community Cooking Tips</h3>
+        <div class="recipe-grid community-grid">
+            <div class="recipe-card community-recipe">
+                <div class="recipe-image">
+                    <div class="placeholder-image">
+                        <i class="fas fa-pizza-slice"></i>
+                    </div>
+                    <div class="recipe-badge community">Community</div>
+                    <button class="recipe-favorite">
+                        <i class="far fa-heart"></i>
+                    </button>
+                </div>
+                <div class="recipe-content">
+                    <div class="recipe-meta">
+                        <span class="recipe-difficulty beginner">Technique</span>
+                        <span class="recipe-time"><i class="fas fa-clock"></i> 2 hours ago</span>
+                    </div>
+                    <h3>Perfect Pasta Every Time</h3>
+                    <p>Always salt your pasta water generously - it should taste like seawater. This is your only chance to season the pasta itself, not just the sauce!</p>
+                    <div class="community-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <span class="author-name">Chef Isabella</span>
+                            <span class="author-level">Master Chef</span>
+                        </div>
+                        <div class="recipe-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span>4.9 (124)</span>
+                        </div>
+                    </div>
+                    <div class="recipe-engagement">
+                        <button class="btn">
+                            <i class="fas fa-thumbs-up"></i>
+                            <span>89</span>
+                        </button>
+                        <button class="btn">
+                            <i class="fas fa-comment"></i>
+                            <span>23</span>
+                        </button>
+                        <button class="btn">
+                            <i class="fas fa-share"></i>
+                            <span>12</span>
+                        </button>
+                    </div>
+                    <br><br>
+                    <button class="btn btn-primary btn-full">Try This Tip</button>
+                </div>
+            </div>
+
+            <div class="recipe-card community-recipe">
+                <div class="recipe-image">
+                    <div class="placeholder-image">
+                        <i class="fas fa-cookie"></i>
+                    </div>
+                    <div class="recipe-badge trending">Trending</div>
+                    <button class="recipe-favorite">
+                        <i class="far fa-heart"></i>
+                    </button>
+                </div>
+                <div class="recipe-content">
+                    <div class="recipe-meta">
+                        <span class="recipe-difficulty intermediate">Baking</span>
+                        <span class="recipe-time"><i class="fas fa-clock"></i> 5 hours</span>
+                    </div>
+                    <h3>Room Temperature Ingredients</h3>
+                    <p>For better baking results, bring eggs and dairy to room temperature before mixing. They incorporate more easily and create better texture in your baked goods.</p>
+                    <div class="community-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <span class="author-name">Baker Tom</span>
+                            <span class="author-level">Baking Expert</span>
+                        </div>
+                        <div class="recipe-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span>4.7 (67)</span>
+                        </div>
+                    </div>
+                    <div class="recipe-engagement">
+                        <button class="btn">
+                            <i class="fas fa-thumbs-up"></i>
+                            <span>156</span>
+                        </button>
+                        <button class="btn">
+                            <i class="fas fa-comment"></i>
+                            <span>34</span>
+                        </button>
+                        <button class="btn">
+                            <i class="fas fa-share"></i>
+                            <span>28</span>
+                        </button>
+                    </div>
+                    <br>
+                    <button class="btn btn-primary btn-full">Try This Tip</button>
+                </div>
+            </div>
+
+            <div class="recipe-card community-recipe">
+                <div class="recipe-image">
+                    <div class="placeholder-image">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <div class="recipe-badge staff-pick">Staff Pick</div>
+                    <button class="recipe-favorite">
+                        <i class="far fa-heart"></i>
+                    </button>
+                </div>
+                <div class="recipe-content">
+                    <div class="recipe-meta">
+                        <span class="recipe-difficulty beginner">Beginner</span>
+                        <span class="recipe-time"><i class="fas fa-clock"></i> 1 day ago</span>
+                    </div>
+                    <h3>Blooming Spices</h3>
+                    <p>Toast whole spices in a dry pan for 30-60 seconds before grinding. This simple step releases essential oils and dramatically improves flavor depth.</p>
+                    <div class="community-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <span class="author-name">Spice Master Raj </span>
+                            <span class="author-level">Spice Master</span>
+                        </div>
+                        <div class="recipe-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span>4.8 (203)</span>
+                        </div>
+                    </div>
+                    <div class="recipe-engagement">
+                        <button class="btn">
+                            <i class="fas fa-thumbs-up"></i>
+                            <span>245</span>
+                        </button>
+                        <button class="btn">
+                            <i class="fas fa-comment"></i>
+                            <span>67</span>
+                        </button>
+                        <button class="btn">
+                            <i class="fas fa-share"></i>
+                            <span>43</span>
+                        </button>
+                    </div>
+                    <br>
+                    <button class="btn btn-primary btn-full">Try This tip</button>
+                </div>
+            </div>
+    </section>
+<br>
+    <!-- Recipe Sharing Modal -->
+    <div id="shareRecipeModal" class="modal-overlay">
+        <div class="modal-content recipe-modal">
+            <button class="modal-close" id="closeRecipeModal">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-header">
+                <h2>Share Your Recipe</h2>
+                <p>Add your culinary creation to our community cookbook</p>
+            </div>
+            <form id="shareRecipeForm" class="recipe-form">
+                <div class="form-section">
+                    <h3>Basic Information</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="recipeName">Recipe Name*</label>
+                            <input type="text" id="recipeName" name="recipeName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="recipeCategory">Category*</label>
+                            <select id="recipeCategory" name="recipeCategory" required>
+                                <option value="">Select a category</option>
+                                <option value="appetizer">Appetizer</option>
+                                <option value="main-dish">Main Dish</option>
+                                <option value="side-dish">Side Dish</option>
+                                <option value="dessert">Dessert</option>
+                                <option value="beverage">Beverage</option>
+                                <option value="breakfast">Breakfast</option>
+                                <option value="snack">Snack</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="recipeDescription">Description*</label>
+                        <textarea id="recipeDescription" name="recipeDescription" rows="3" placeholder="Tell us about your recipe..." required></textarea>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="prepTime">Prep Time (minutes)*</label>
+                            <input type="number" id="prepTime" name="prepTime" min="1" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="cookTime">Cook Time (minutes)*</label>
+                            <input type="number" id="cookTime" name="cookTime" min="0" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="servings">Servings*</label>
+                            <input type="number" id="servings" name="servings" min="1" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="difficulty">Difficulty Level*</label>
+                        <select id="difficulty" name="difficulty" required>
+                            <option value="">Select difficulty</option>
+                            <option value="beginner">Beginner</option>
+                            <option value="intermediate">Intermediate</option>
+                            <option value="advanced">Advanced</option>
+                            <option value="expert">Expert</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-section">
+                    <h3>Ingredients</h3>
+                    <div id="ingredientsList">
+                        <div class="ingredient-item">
+                            <div class="form-row">
+                                <div class="form-group flex-2">
+                                    <input type="text" placeholder="Ingredient name" name="ingredients[]" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" placeholder="Amount" name="amounts[]" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" placeholder="Unit" name="units[]">
+                                </div>
+                                <button type="button" class="btn-icon remove-ingredient" style="display: none;">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-outline" id="addIngredient">
+                        <i class="fas fa-plus"></i> Add Ingredient
+                    </button>
+                </div>
+                
+                <div class="form-section">
+                    <h3>Instructions</h3>
+                    <div id="instructionsList">
+                        <div class="instruction-item">
+                            <div class="form-group">
+                                <label>Step 1</label>
+                                <textarea name="instructions[]" rows="2" placeholder="Describe this step..." required></textarea>
+                            </div>
+                            <button type="button" class="btn-icon remove-instruction" style="display: none;">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-outline" id="addInstruction">
+                        <i class="fas fa-plus"></i> Add Step
+                    </button>
+                </div>
+                
+                <div class="form-section">
+                    <h3>Additional Information</h3>
+                    <div class="form-group">
+                        <label for="recipeTags">Tags (comma-separated)</label>
+                        <input type="text" id="recipeTags" name="recipeTags" placeholder="e.g., vegetarian, quick, healthy">
+                        <small>Add tags to help others find your recipe</small>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="recipeNotes">Chef's Notes (optional)</label>
+                        <textarea id="recipeNotes" name="recipeNotes" rows="3" placeholder="Any special tips or variations..."></textarea>
+                    </div>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary" id="cancelRecipe">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Share Recipe</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-utensils"></i>
+                        <span>FoodFusion</span>
+                    </div>
+                    <p>Connecting food enthusiasts worldwide through the art of cooking and culinary creativity.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-link" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="recipes.html">Recipe Collection</a></li>
+                        <li><a href="community.html">Community Cookbook</a></li>
+                        <li><a href="resources.html">Culinary Resources</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">Disclaimer</a></li>
+                        <li><a href="#">GDPR Compliance</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Newsletter</h3>
+                    <p>Get the latest recipes and cooking tips delivered to your inbox.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 FoodFusion. All rights reserved. Made with <i class="fas fa-heart"></i> for food lovers everywhere.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Community page functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Share recipe modal
+            const shareRecipeBtn = document.getElementById('shareRecipeBtn');
+            const shareRecipeModal = document.getElementById('shareRecipeModal');
+            const closeRecipeModal = document.getElementById('closeRecipeModal');
+            const cancelRecipe = document.getElementById('cancelRecipe');
+            
+            shareRecipeBtn.addEventListener('click', function() {
+                shareRecipeModal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+            
+            function closeModal() {
+                shareRecipeModal.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+            
+            closeRecipeModal.addEventListener('click', closeModal);
+            cancelRecipe.addEventListener('click', closeModal);
+            
+            shareRecipeModal.addEventListener('click', function(e) {
+                if (e.target === shareRecipeModal) {
+                    closeModal();
+                }
+            });
+            
+            // Dynamic ingredients and instructions
+            const addIngredientBtn = document.getElementById('addIngredient');
+            const addInstructionBtn = document.getElementById('addInstruction');
+            const ingredientsList = document.getElementById('ingredientsList');
+            const instructionsList = document.getElementById('instructionsList');
+            
+            addIngredientBtn.addEventListener('click', function() {
+                const ingredientItem = document.createElement('div');
+                ingredientItem.className = 'ingredient-item';
+                ingredientItem.innerHTML = `
+                    <div class="form-row">
+                        <div class="form-group flex-2">
+                            <input type="text" placeholder="Ingredient name" name="ingredients[]" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Amount" name="amounts[]" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Unit" name="units[]">
+                        </div>
+                        <button type="button" class="btn-icon remove-ingredient">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </div>
+                `;
+                ingredientsList.appendChild(ingredientItem);
+                
+                ingredientItem.querySelector('.remove-ingredient').addEventListener('click', function() {
+                    ingredientItem.remove();
+                });
+            });
+            
+            addInstructionBtn.addEventListener('click', function() {
+                const instructionCount = instructionsList.children.length + 1;
+                const instructionItem = document.createElement('div');
+                instructionItem.className = 'instruction-item';
+                instructionItem.innerHTML = `
+                    <div class="form-group">
+                        <label>Step ${instructionCount}</label>
+                        <textarea name="instructions[]" rows="2" placeholder="Describe this step..." required></textarea>
+                    </div>
+                    <button type="button" class="btn-icon remove-instruction">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                `;
+                instructionsList.appendChild(instructionItem);
+                
+                instructionItem.querySelector('.remove-instruction').addEventListener('click', function() {
+                    instructionItem.remove();
+                    // Update step numbers
+                    const instructions = instructionsList.querySelectorAll('.instruction-item');
+                    instructions.forEach((item, index) => {
+                        item.querySelector('label').textContent = `Step ${index + 1}`;
+                    });
+                });
+            });
+            
+            // Recipe form submission
+            document.getElementById('shareRecipeForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                // This would submit the recipe to the backend
+                alert('Thank you for sharing your recipe! It will be reviewed and published soon.');
+                closeModal();
+                this.reset();
+            });
+            
+            // Filter functionality
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    const filter = this.dataset.filter;
+                    console.log(`Filtering community recipes by: ${filter}`);
+                });
+            });
+            
+            // Engagement buttons
+            document.querySelectorAll('.btn').forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const icon = this.querySelector('i');
+                    const count = this.querySelector('span');
+                    
+                    if (icon.classList.contains('fa-thumbs-up')) {
+                        if (this.classList.contains('active')) {
+                            this.classList.remove('active');
+                            count.textContent = parseInt(count.textContent) - 1;
+                        } else {
+                            this.classList.add('active');
+                            count.textContent = parseInt(count.textContent) + 1;
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

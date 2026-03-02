@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account - FoodFusion</title>
+    <meta name="description" content="Join the FoodFusion community! Create your account to access exclusive recipes, participate in cooking events, and connect with fellow food enthusiasts.">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body class="auth-page">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <i class="fas fa-utensils"></i>
+                    <span>FoodFusion</span>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="recipes.html" class="nav-link">Recipes</a>
+                </li>
+                <li class="nav-item">
+                    <a href="community.html" class="nav-link">Community</a>
+                </li>
+                <li class="nav-item">
+                    <a href="resources.html" class="nav-link">Resources</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a href="login.html" class="nav-link login-btn">Login</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Register Section -->
+    <section class="auth-section">
+        <div class="auth-container">
+            <div class="auth-content">
+                <div class="auth-header">
+                    <h1>Join FoodFusion</h1>
+                    <p>Create your account and start your culinary adventure with our global community</p>
+                </div>
+
+                <form id="registerForm" class="auth-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name</label>
+                            <div class="input-group">
+                                <i class="fas fa-user"></i>
+                                <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required>
+                            </div>
+                            <span class="error-message"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name</label>
+                            <div class="input-group">
+                                <i class="fas fa-user"></i>
+                                <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required>
+                            </div>
+                            <span class="error-message"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="registerEmail">Email Address</label>
+                        <div class="input-group">
+                            <i class="fas fa-envelope"></i>
+                            <input type="email" id="registerEmail" name="email" placeholder="Enter your email address" required>
+                        </div>
+                        <span class="error-message"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="registerPassword">Password</label>
+                        <div class="input-group">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" id="registerPassword" name="password" placeholder="Create a strong password" required>
+                            <button type="button" class="password-toggle" id="toggleRegisterPassword">
+                                <i class="far fa-eye"></i>
+                            </button>
+                        </div>
+                        <span class="error-message"></span>
+                        <div class="password-strength">
+                            <div class="strength-bar">
+                                <div class="strength-fill"></div>
+                            </div>
+                            <span class="strength-text">Password strength</span>
+                        </div>
+                        <div class="password-requirements">
+                            <div class="requirement" id="lengthReq">
+                                <i class="fas fa-times"></i>
+                                <span>At least 8 characters</span>
+                            </div>
+                            <div class="requirement" id="uppercaseReq">
+                                <i class="fas fa-times"></i>
+                                <span>One uppercase letter</span>
+                            </div>
+                            <div class="requirement" id="lowercaseReq">
+                                <i class="fas fa-times"></i>
+                                <span>One lowercase letter</span>
+                            </div>
+                            <div class="requirement" id="numberReq">
+                                <i class="fas fa-times"></i>
+                                <span>One number</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm Password</label>
+                        <div class="input-group">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password" required>
+                            <button type="button" class="password-toggle" id="toggleConfirmPassword">
+                                <i class="far fa-eye"></i>
+                            </button>
+                        </div>
+                        <span class="error-message"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cookingLevel">Cooking Experience Level</label>
+                        <div class="input-group">
+                            <i class="fas fa-chef-hat"></i>
+                            <select id="cookingLevel" name="cookingLevel" required>
+                                <option value="">Select your level</option>
+                                <option value="beginner">Beginner - Just starting my cooking journey</option>
+                                <option value="intermediate">Intermediate - Comfortable with basic recipes</option>
+                                <option value="advanced">Advanced - Experienced home cook</option>
+                                <option value="expert">Expert - Professional or near-professional level</option>
+                            </select>
+                        </div>
+                        <span class="error-message"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="interests">Culinary Interests (Optional)</label>
+                        <div class="interests-grid">
+                            <label class="interest-checkbox">
+                                <input type="checkbox" name="interests" value="baking">
+                                <span class="checkmark"></span>
+                                <span class="interest-label">Baking</span>
+                            </label>
+                            <label class="interest-checkbox">
+                                <input type="checkbox" name="interests" value="healthy-cooking">
+                                <span class="checkmark"></span>
+                                <span class="interest-label">Healthy Cooking</span>
+                            </label>
+                            <label class="interest-checkbox">
+                                <input type="checkbox" name="interests" value="international-cuisine">
+                                <span class="checkmark"></span>
+                                <span class="interest-label">International Cuisine</span>
+                            </label>
+                            <label class="interest-checkbox">
+                                <input type="checkbox" name="interests" value="quick-meals">
+                                <span class="checkmark"></span>
+                                <span class="interest-label">Quick Meals</span>
+                            </label>
+                            <label class="interest-checkbox">
+                                <input type="checkbox" name="interests" value="vegetarian">
+                                <span class="checkmark"></span>
+                                <span class="interest-label">Vegetarian</span>
+                            </label>
+                            <label class="interest-checkbox">
+                                <input type="checkbox" name="interests" value="desserts">
+                                <span class="checkmark"></span>
+                                <span class="interest-label">Desserts</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="newsletter" name="newsletter" checked>
+                            <span class="checkmark"></span>
+                            Subscribe to our newsletter for weekly recipes and cooking tips
+                        </label>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="terms" name="terms" required>
+                            <span class="checkmark"></span>
+                            I agree to the <a href="#" class="link">Terms of Service</a> and <a href="#" class="link">Privacy Policy</a>
+                        </label>
+                        <span class="error-message"></span>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-full btn-large">
+                        <span class="btn-text">Create Account</span>
+                        <span class="btn-loading" style="display: none;">
+                            <i class="fas fa-spinner fa-spin"></i> Creating Account...
+                        </span>
+                    </button>
+                </form>
+
+                <div class="auth-divider">
+                    <span>or</span>
+                </div>
+
+                <div class="social-login">
+                    <button class="btn btn-social btn-google">
+                        <i class="fab fa-google"></i>
+                        Sign up with Google
+                    </button>
+                    <button class="btn btn-social btn-facebook">
+                        <i class="fab fa-facebook-f"></i>
+                        Sign up with Facebook
+                    </button>
+                </div>
+
+                <div class="auth-footer">
+                    <p>Already have an account? <a href="login.html" class="auth-link">Sign In</a></p>
+                </div>
+            </div>
+
+            <div class="auth-image">
+                <div class="auth-pattern"></div>
+                <div class="auth-content-overlay">
+                    <h2>Start Your Culinary Journey</h2>
+                    <p>Join thousands of food enthusiasts who are already part of our vibrant cooking community.</p>
+                    <div class="feature-list">
+                        <div class="feature-item">
+                            <i class="fas fa-book-open"></i>
+                            <span>Access 12,000+ tested recipes</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-users"></i>
+                            <span>Connect with 50,000+ food lovers</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-video"></i>
+                            <span>Watch exclusive cooking tutorials</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>Join virtual cooking events</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Modal -->
+    <div id="registrationSuccessModal" class="modal-overlay">
+        <div class="modal-content success-modal">
+            <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2>Welcome to FoodFusion!</h2>
+            <p>Your account has been created successfully. We've sent a verification email to your inbox.</p>
+            <div class="success-actions">
+                <button class="btn btn-primary" id="continueToLogin">Continue to Login</button>
+                <button class="btn btn-outline" id="exploreSite">Explore the Site</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/auth.js"></script>
+    <script>
+        // Registration page specific functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Password visibility toggles
+            const toggles = [
+                { btn: 'toggleRegisterPassword', input: 'registerPassword' },
+                { btn: 'toggleConfirmPassword', input: 'confirmPassword' }
+            ];
+
+            toggles.forEach(toggle => {
+                const toggleBtn = document.getElementById(toggle.btn);
+                const passwordInput = document.getElementById(toggle.input);
+                
+                toggleBtn.addEventListener('click', function() {
+                    const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+                    passwordInput.setAttribute('type', type);
+                    
+                    const icon = this.querySelector('i');
+                    if (type === 'password') {
+                        icon.classList.remove('fa-eye-slash');
+                        icon.classList.add('fa-eye');
+                    } else {
+                        icon.classList.remove('fa-eye');
+                        icon.classList.add('fa-eye-slash');
+                    }
+                });
+            });
+
+            // Password strength checker
+            const passwordInput = document.getElementById('registerPassword');
+            const strengthBar = document.querySelector('.strength-fill');
+            const strengthText = document.querySelector('.strength-text');
+            const requirements = {
+                length: document.getElementById('lengthReq'),
+                uppercase: document.getElementById('uppercaseReq'),
+                lowercase: document.getElementById('lowercaseReq'),
+                number: document.getElementById('numberReq')
+            };
+
+            passwordInput.addEventListener('input', function() {
+                const password = this.value;
+                let score = 0;
+                
+                // Check requirements
+                const checks = {
+                    length: password.length >= 8,
+                    uppercase: /[A-Z]/.test(password),
+                    lowercase: /[a-z]/.test(password),
+                    number: /\d/.test(password)
+                };
+
+                Object.keys(checks).forEach(key => {
+                    const requirement = requirements[key];
+                    const icon = requirement.querySelector('i');
+                    
+                    if (checks[key]) {
+                        requirement.classList.add('met');
+                        icon.className = 'fas fa-check';
+                        score++;
+                    } else {
+                        requirement.classList.remove('met');
+                        icon.className = 'fas fa-times';
+                    }
+                });
+
+                // Update strength bar
+                const percentage = (score / 4) * 100;
+                strengthBar.style.width = percentage + '%';
+                
+                if (score === 0) {
+                    strengthBar.className = 'strength-fill';
+                    strengthText.textContent = 'Password strength';
+                } else if (score === 1) {
+                    strengthBar.className = 'strength-fill weak';
+                    strengthText.textContent = 'Weak password';
+                } else if (score === 2) {
+                    strengthBar.className = 'strength-fill fair';
+                    strengthText.textContent = 'Fair password';
+                } else if (score === 3) {
+                    strengthBar.className = 'strength-fill good';
+                    strengthText.textContent = 'Good password';
+                } else {
+                    strengthBar.className = 'strength-fill strong';
+                    strengthText.textContent = 'Strong password';
+                }
+            });
+
+            // Confirm password validation
+            const confirmPasswordInput = document.getElementById('confirmPassword');
+            confirmPasswordInput.addEventListener('input', function() {
+                const password = passwordInput.value;
+                const confirmPassword = this.value;
+                const errorMessage = this.parentNode.nextElementSibling;
+                
+                if (confirmPassword && password !== confirmPassword) {
+                    this.classList.add('error');
+                    errorMessage.textContent = 'Passwords do not match';
+                } else {
+                    this.classList.remove('error');
+                    errorMessage.textContent = '';
+                }
+            });
+
+            // Social registration buttons
+            document.querySelector('.btn-google').addEventListener('click', function() {
+                alert('Google OAuth registration would be implemented here');
+            });
+
+            document.querySelector('.btn-facebook').addEventListener('click', function() {
+                alert('Facebook OAuth registration would be implemented here');
+            });
+
+            // Success modal actions
+            document.getElementById('continueToLogin').addEventListener('click', function() {
+                window.location.href = 'login.html';
+            });
+
+            document.getElementById('exploreSite').addEventListener('click', function() {
+                document.getElementById('registrationSuccessModal').classList.remove('active');
+                document.body.style.overflow = '';
+                window.location.href = 'index.html';
+            });
+        });
+    </script>
+</body>
+</html>

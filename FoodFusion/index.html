@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodFusion - Culinary Platform for Food Enthusiasts</title>
+    <meta name="description" content="FoodFusion is a culinary platform dedicated to promoting home cooking and culinary creativity among food enthusiasts. Share recipes, tips, and connect with our vibrant food community.">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Cookie Consent Popup -->
+    <div id="cookieConsent" class="cookie-consent">
+        <div class="cookie-content">
+            <p>We use cookies to enhance your experience on our website. By continuing to use this site, you agree to our use of cookies.</p>
+            <div class="cookie-buttons">
+                <button id="acceptCookies" class="btn btn-primary">Accept</button>
+                <button id="declineCookies" class="btn btn-secondary">Decline</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <i class="fas fa-utensils"></i>
+                    <span>FoodFusion</span>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link active">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="recipes.html" class="nav-link">Recipes</a>
+                </li>
+                <li class="nav-item">
+                    <a href="community.html" class="nav-link">Community</a>
+                </li>
+                <li class="nav-item">
+                    <a href="resources.html" class="nav-link">Resources</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a href="login.html" class="nav-link login-btn">Login</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to FoodFusion</h1>
+            <p class="hero-subtitle">Where Culinary Dreams Come to Life</p>
+            <p class="hero-description">
+                Discover the art of home cooking with our vibrant community of food enthusiasts. 
+                Share recipes, learn new techniques, and embark on a delicious journey that celebrates 
+                the fusion of flavors from around the world.
+            </p>
+            <div class="hero-buttons">
+                <a id="joinUsBtn" class="btn btn-primary btn-large" href="register.html">Join Our Community</a>
+                <a href="recipes.html" class="btn btn-outline btn-large">Explore Recipes</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="hero-pattern"></div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="mission">
+        <div class="container">
+            <div class="mission-content">
+                <h2>Our Culinary Mission</h2>
+                <p>
+                    At FoodFusion, we believe that cooking is more than just preparing meals—it's about creating 
+                    connections, preserving traditions, and expressing creativity. Our platform serves as a bridge 
+                    between passionate home cooks and culinary enthusiasts worldwide, fostering a community where 
+                    knowledge, recipes, and experiences are shared freely.
+                </p>
+                <p>
+                    We're dedicated to making cooking accessible, enjoyable, and rewarding for everyone, regardless 
+                    of skill level. From simple weeknight dinners to elaborate feast preparations, we provide the 
+                    tools, inspiration, and community support to help you succeed in your culinary adventures.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured News Feed -->
+    <section class="news-feed">
+        <div class="container">
+            <h2>Featured Recipes & Culinary Trends</h2>
+            <div class="news-grid">
+                <article class="news-card featured">
+                    <div class="news-image">
+                        <div class="placeholder-image">
+                            <i class="fas fa-camera"></i>
+                        </div>
+                    </div>
+                    <div class="news-content">
+                        <span class="news-category">Trending Now</span>
+                        <h3>Mediterranean Fusion: Modern Takes on Classic Dishes</h3>
+                        <p>Explore how contemporary chefs are reimagining traditional Mediterranean cuisine with innovative techniques and global influences.</p>
+                        <div class="news-meta">
+                            <span class="news-date">June 20, 2025</span>
+                            <span class="news-read-time">5 min read</span>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="news-card">
+                    <div class="news-image">
+                        <div class="placeholder-image">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                    </div>
+                    <div class="news-content">
+                        <span class="news-category">Healthy Living</span>
+                        <h3>Plant-Based Proteins: Complete Guide</h3>
+                        <p>Discover the world of plant-based proteins and learn how to create satisfying, nutritious meals without meat.</p>
+                        <div class="news-meta">
+                            <span class="news-date">June 18, 2025</span>
+                            <span class="news-read-time">8 min read</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div class="news-image">
+                        <div class="placeholder-image">
+                            <i class="fas fa-fire"></i>
+                        </div>
+                    </div>
+                    <div class="news-content">
+                        <span class="news-category">Techniques</span>
+                        <h3>Mastering the Art of Fermentation</h3>
+                        <p>Learn the ancient art of fermentation and discover how to create your own kimchi, sauerkraut, and kombucha at home.</p>
+                        <div class="news-meta">
+                            <span class="news-date">June 15, 2025</span>
+                            <span class="news-read-time">12 min read</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div class="news-image">
+                        <div class="placeholder-image">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                    </div>
+                    <div class="news-content">
+                        <span class="news-category">Global Cuisine</span>
+                        <h3>Street Food Adventures: Asian Night Markets</h3>
+                        <p>Take a culinary journey through Asia's vibrant night markets and learn to recreate these beloved street foods at home.</p>
+                        <div class="news-meta">
+                            <span class="news-date">June 12, 2025</span>
+                            <span class="news-read-time">6 min read</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="news-card">
+                    <div class="news-image">
+                        <div class="placeholder-image">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                    </div>
+                    <div class="news-content">
+                        <span class="news-category">Global Cuisine</span>
+                        <h3>Street Food Adventures: Asian Night Markets</h3>
+                        <p>Take a culinary journey through Asia's vibrant night markets and learn to recreate these beloved street foods at home.</p>
+                        <div class="news-meta">
+                            <span class="news-date">June 12, 2025</span>
+                            <span class="news-read-time">6 min read</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Carousel -->
+    <section class="events-carousel">
+        <div class="container">
+            <h2>Upcoming Cooking Events</h2>
+            <div class="carousel-container">
+                <div class="carousel-wrapper">
+                    <div class="carousel-slide active">
+                        <div class="event-card">
+                            <div class="event-date">
+                                <span class="month">JUL</span>
+                                <span class="day">15</span>
+                            </div>
+                            <div class="event-content">
+                                <h3>Summer Grilling Masterclass</h3>
+                                <p>Learn advanced grilling techniques from professional pitmasters. Perfect your BBQ skills and discover secret marinades and rubs.</p>
+                                <div class="event-details">
+                                    <span><i class="fas fa-clock"></i> 2:00 PM - 6:00 PM</span>
+                                    <span><i class="fas fa-map-marker-alt"></i> Online Workshop</span>
+                                </div>
+                                <button class="btn btn-outline">Register Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-slide">
+                        <div class="event-card">
+                            <div class="event-date">
+                                <span class="month">JUL</span>
+                                <span class="day">22</span>
+                            </div>
+                            <div class="event-content">
+                                <h3>Artisan Bread Baking Workshop</h3>
+                                <p>Master the art of sourdough and artisan bread making. From starter cultivation to perfect crust formation.</p>
+                                <div class="event-details">
+                                    <span><i class="fas fa-clock"></i> 10:00 AM - 4:00 PM</span>
+                                    <span><i class="fas fa-map-marker-alt"></i> Virtual Kitchen</span>
+                                </div>
+                                <button class="btn btn-outline">Register Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-slide">
+                        <div class="event-card">
+                            <div class="event-date">
+                                <span class="month">AUG</span>
+                                <span class="day">05</span>
+                            </div>
+                            <div class="event-content">
+                                <h3>International Spice Trading</h3>
+                                <p>Explore the world of spices with renowned spice traders. Learn about origins, flavor profiles, and proper storage techniques.</p>
+                                <div class="event-details">
+                                    <span><i class="fas fa-clock"></i> 7:00 PM - 9:00 PM</span>
+                                    <span><i class="fas fa-map-marker-alt"></i> Live Stream</span>
+                                </div>
+                                <button class="btn btn-outline">Register Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="carousel-btn prev-btn" id="prevBtn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="carousel-btn next-btn" id="nextBtn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+            
+            
+        </div>
+    </section>
+
+    <!-- Join Us Popup -->
+    <div id="joinUsPopup" class="popup-overlay">
+        <div class="popup-content">
+            <button class="popup-close" id="closePopup">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="popup-header">
+                <h2>Join Our Culinary Community</h2>
+                <p>Become part of a vibrant community of food enthusiasts and start your culinary journey with us.</p>
+            </div>
+            <form id="joinUsForm" class="join-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input type="text" id="firstName" name="firstName" required>
+                        <span class="error-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" id="lastName" name="lastName" required>
+                        <span class="error-message"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                    <span class="error-message"></span>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                    <span class="error-message"></span>
+                    <div class="password-requirements">
+                        <small>Password must be at least 8 characters long and contain uppercase, lowercase, and numbers.</small>
+                    </div>
+                </div>
+                <div class="form-group checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="newsletter" name="newsletter">
+                        <span class="checkmark"></span>
+                        Subscribe to our newsletter for weekly recipes and cooking tips
+                    </label>
+                </div>
+                <div class="form-group checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <span class="checkmark"></span>
+                        I agree to the <a href="#" class="link">Terms of Service</a> and <a href="#" class="link">Privacy Policy</a>
+                    </label>
+                    <span class="error-message"></span>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">Join FoodFusion</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-utensils"></i>
+                        <span>FoodFusion</span>
+                    </div>
+                    <p>Connecting food enthusiasts worldwide through the art of cooking and culinary creativity.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Pinterest">
+                            <i class="fab fa-pinterest"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="recipes.html">Recipe Collection</a></li>
+                        <li><a href="community.html">Community Cookbook</a></li>
+                        <li><a href="resources.html">Culinary Resources</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" id="privacyPolicyLink">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">Disclaimer</a></li>
+                        <li><a href="#">GDPR Compliance</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Newsletter</h3>
+                    <p>Get the latest recipes and cooking tips delivered to your inbox.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 FoodFusion. All rights reserved. Made with <i class="fas fa-heart"></i> for food lovers everywhere.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/forms.js"></script>
+</body>
+</html>

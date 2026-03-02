@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Culinary Resources - FoodFusion</title>
+    <meta name="description" content="Access our comprehensive collection of culinary resources including downloadable recipe cards, cooking tutorials, instructional videos, and kitchen hacks.">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <i class="fas fa-utensils"></i>
+                    <span>FoodFusion</span>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="recipes.html" class="nav-link">Recipes</a>
+                </li>
+                <li class="nav-item">
+                    <a href="community.html" class="nav-link">Community</a>
+                </li>
+                <li class="nav-item">
+                    <a href="resources.html" class="nav-link active">Resources</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a href="login.html" class="nav-link login-btn">Login</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Culinary Resources</h1>
+            <p class="page-subtitle">Enhance your cooking skills with our comprehensive resource library</p>
+        </div>
+    </section>
+
+
+    <!-- Resource Categories -->
+    <section class="resource-categories">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center;">Browse Resources by Category</h2>
+            <div class="categories-tabs">
+                <button class="category-tab active" data-category="all">All Resources</button>
+                <button class="category-tab" data-category="guides">Cooking Guides</button>
+                <button class="category-tab" data-category="videos">Video Tutorials</button>
+                <button class="category-tab" data-category="cards">Recipe Cards</button>
+                <button class="category-tab" data-category="tools">Kitchen Tools</button>
+                <button class="category-tab" data-category="techniques">Techniques</button>
+            </div>
+        </div>
+    </section>
+<br>
+    <!-- Featured Resources -->
+    <section class="featured-resources">
+        <div class="container">
+            <div class="section-header" style="text-align: center;">
+                <h2 class="section-title">Featured Resources</h2>
+                <p class="section-subtitle">Our most popular and essential culinary resources</p>
+            </div>
+            
+            <div class="resources-grid">
+                <div class="resource-card featured" data-category="guides">
+                    <div class="resource-image">
+                        <div class="resource-badge">Most Popular</div>
+                        <div class="resource-placeholder">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                    </div>
+                    <div class="resource-content">
+                        <div class="resource-meta">
+                            <span class="resource-type">PDF Guide</span>
+                            <span class="resource-pages">24 pages</span>
+                        </div>
+                        <h3 class="resource-title">Complete Knife Skills Mastery Guide</h3>
+                        <p class="resource-description">
+                            Master essential knife techniques with this comprehensive guide covering proper grip, 
+                            basic cuts, safety tips, and maintenance. Includes step-by-step illustrations.
+                        </p>
+                        <div class="resource-stats">
+                            <div class="stat">
+                                <i class="fas fa-download"></i>
+                                <span>12,847 downloads</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-star"></i>
+                                <span>4.9 rating</span>
+                            </div>
+                        </div>
+                        <div class="resource-actions">
+                            <button class="btn btn-primary">
+                                <i class="fas fa-download"></i>
+                                Download Free
+                            </button>
+                            <button class="btn btn-outline">
+                                <i class="fas fa-eye"></i>
+                                Preview
+                            </button>
+                        </div>
+                    </div>
+                </div>
+<br>
+                <div class="resource-card" data-category="videos">
+                    <div class="resource-image">
+                        <div class="resource-badge video-badge">Video Series</div>
+                        <div class="resource-placeholder">
+                            <i class="fas fa-play-circle"></i>
+                        </div>
+                    </div>
+                    <div class="resource-content">
+                        <div class="resource-meta">
+                            <span class="resource-type">Video Tutorial</span>
+                            <span class="resource-duration">45 min</span>
+                        </div>
+                        <h3 class="resource-title">Bread Making Fundamentals</h3>
+                        <p class="resource-description">
+                            Learn the art of bread making from scratch. This video series covers yeast activation, 
+                            kneading techniques, proofing, and baking for perfect homemade bread.
+                        </p>
+                        <div class="resource-stats">
+                            <div class="stat">
+                                <i class="fas fa-play"></i>
+                                <span>8,924 views</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-thumbs-up"></i>
+                                <span>96% liked</span>
+                            </div>
+                        </div>
+                        <div class="resource-actions">
+                            <button class="btn btn-primary">
+                                <i class="fas fa-play"></i>
+                                Watch Now
+                            </button>
+                            <button class="btn btn-outline">
+                                <i class="fas fa-bookmark"></i>
+                                Save
+                            </button>
+                        </div>
+                    </div>
+                </div>
+<br>
+                <div class="resource-card" data-category="cards">
+                    <div class="resource-image">
+                        <div class="resource-badge">Recipe Cards</div>
+                        <div class="resource-placeholder">
+                            <i class="fas fa-address-card"></i>
+                        </div>
+                    </div>
+                    <div class="resource-content">
+                        <div class="resource-meta">
+                            <span class="resource-type">Printable Cards</span>
+                            <span class="resource-count">12 cards</span>
+                        </div>
+                        <h3 class="resource-title">Essential Sauce Recipes Collection</h3>
+                        <p class="resource-description">
+                            Beautifully designed recipe cards featuring 12 essential sauces every home cook should know. 
+                            Perfect for printing and organizing in your recipe box.
+                        </p>
+                        <div class="resource-stats">
+                            <div class="stat">
+                                <i class="fas fa-download"></i>
+                                <span>5,632 downloads</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-print"></i>
+                                <span>Print-ready</span>
+                            </div>
+                        </div>
+                        <div class="resource-actions">
+                            <button class="btn btn-primary">
+                                <i class="fas fa-download"></i>
+                                Download Set
+                            </button>
+                            <button class="btn btn-outline">
+                                <i class="fas fa-images"></i>
+                                View Gallery
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<br>
+    <!-- All Resources -->
+    <section class="all-resources" style="text-align: center;">
+        <div class="container">
+            <div class="section-header" >
+                <h2 class="section-title">All Resources</h2>
+                
+                </div>
+            </div>
+            
+            <div class="resources-list">
+                <div class="resource-item" data-category="guides">
+                    <div class="resource-icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <div class="resource-info">
+                        <h3>Spice & Herb Pairing Guide</h3>
+                        <p>Comprehensive reference for combining spices and herbs with different ingredients and cuisines.</p>
+                        <div class="resource-meta">
+                            <span class="type">PDF Guide</span>
+                            <span class="size">18 pages</span>
+                            <span class="downloads">3,421 downloads</span>
+                        </div>
+                    </div>
+                    <div class="resource-actions">
+                        <button class="btn btn-primary">Download</button>
+                    </div>
+                </div>
+
+                <div class="resource-item" data-category="videos">
+                    <div class="resource-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <div class="resource-info">
+                        <h3>Pasta Making Masterclass</h3>
+                        <p>Step-by-step video tutorial for making fresh pasta from scratch, including various shapes and techniques.</p>
+                        <div class="resource-meta">
+                            <span class="type">Video</span>
+                            <span class="duration">32 min</span>
+                            <span class="views">6,789 views</span>
+                        </div>
+                    </div>
+                    <div class="resource-actions">
+                        <button class="btn btn-primary">Watch</button>
+                    </div>
+                </div>
+
+                <div class="resource-item" data-category="tools">
+                    <div class="resource-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <div class="resource-info">
+                        <h3>Cooking Conversion Calculator</h3>
+                        <p>Interactive tool for converting measurements, temperatures, and cooking times across different units.</p>
+                        <div class="resource-meta">
+                            <span class="type">Online Tool</span>
+                            <span class="usage">Free to use</span>
+                            <span class="users">2,156 users</span>
+                        </div>
+                    </div>
+                    <div class="resource-actions">
+                        <button class="btn btn-primary">Use Tool</button>
+                    </div>
+                </div>
+
+                <div class="resource-item" data-category="techniques">
+                    <div class="resource-icon">
+                        <i class="fas fa-play-circle"></i>
+                    </div>
+                    <div class="resource-info">
+                        <h3>Knife Safety & Maintenance</h3>
+                        <p>Essential video guide covering proper knife handling, safety techniques, and maintenance tips.</p>
+                        <div class="resource-meta">
+                            <span class="type">Video Tutorial</span>
+                            <span class="duration">15 min</span>
+                            <span class="views">4,523 views</span>
+                        </div>
+                    </div>
+                    <div class="resource-actions">
+                        <button class="btn btn-primary">Watch</button>
+                    </div>
+                </div>
+
+                <div class="resource-item" data-category="cards">
+                    <div class="resource-icon">
+                        <i class="fas fa-file-image"></i>
+                    </div>
+                    <div class="resource-info">
+                        <h3>Seasonal Ingredient Cards</h3>
+                        <p>Beautiful printable cards showcasing seasonal ingredients with peak times and recipe suggestions.</p>
+                        <div class="resource-meta">
+                            <span class="type">Printable Cards</span>
+                            <span class="count">24 cards</span>
+                            <span class="downloads">1,987 downloads</span>
+                        </div>
+                    </div>
+                    <div class="resource-actions">
+                        <button class="btn btn-primary">Download</button>
+                    </div>
+                </div>
+
+                <div class="resource-item" data-category="guides">
+                    <div class="resource-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <div class="resource-info">
+                        <h3>Kitchen Equipment Buying Guide</h3>
+                        <p>Comprehensive guide to essential kitchen equipment with recommendations for different budgets and needs.</p>
+                        <div class="resource-meta">
+                            <span class="type">Digital Guide</span>
+                            <span class="size">32 pages</span>
+                            <span class="downloads">2,765 downloads</span>
+                        </div>
+                    </div>
+                    <div class="resource-actions">
+                        <button class="btn btn-primary">Download</button>
+                    </div>
+                </div>
+
+                <div class="resource-item" data-category="videos">
+                    <div class="resource-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <div class="resource-info">
+                        <h3>Fermentation Basics Workshop</h3>
+                        <p>Complete video workshop on fermentation fundamentals, covering kimchi, sauerkraut, and kombucha.</p>
+                        <div class="resource-meta">
+                            <span class="type">Workshop Video</span>
+                            <span class="duration">1h 15min</span>
+                            <span class="views">3,412 views</span>
+                        </div>
+                    </div>
+                    <div class="resource-actions">
+                        <button class="btn btn-primary">Watch</button>
+                    </div>
+                </div>
+
+                <div class="resource-item" data-category="tools">
+                    <div class="resource-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="resource-info">
+                        <h3>Meal Planning Template</h3>
+                        <p>Downloadable meal planning template with grocery list generator and nutritional tracking.</p>
+                        <div class="resource-meta">
+                            <span class="type">Excel Template</span>
+                            <span class="format">.xlsx file</span>
+                            <span class="downloads">4,321 downloads</span>
+                        </div>
+                    </div>
+                    <div class="resource-actions">
+                        <button class="btn btn-primary">Download</button>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="load-more-resources">
+                <button class="btn btn-outline">Load More Resources</button>
+            </div>
+        </div>
+    </section>
+<br>
+    <!-- Educational Content -->
+    <section class="educational-content">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center;">Educational Content</h2>
+            <div class="education-grid">
+                <div class="education-card">
+                    <div class="education-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Culinary Fundamentals Course</h3>
+                    <p>
+                        A comprehensive online course covering basic cooking techniques, ingredient knowledge, 
+                        and kitchen safety. Perfect for beginners starting their culinary journey.
+                    </p>
+                    <div class="course-info">
+                        <div class="info-item">
+                            <i class="fas fa-clock"></i>
+                            <span>8 hours</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-play"></i>
+                            <span>24 lessons</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-certificate"></i>
+                            <span>Certificate</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary">Start Course</button>
+                </div>
+
+                <div class="education-card">
+                    <div class="education-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Advanced Techniques Masterclass</h3>
+                    <p>
+                        Master advanced cooking techniques like sous vide, molecular gastronomy, and professional 
+                        plating. Designed for experienced home cooks and culinary students.
+                    </p>
+                    <div class="course-info">
+                        <div class="info-item">
+                            <i class="fas fa-clock"></i>
+                            <span>12 hours</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-play"></i>
+                            <span>18 lessons</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-star"></i>
+                            <span>Premium</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary">Enroll Now</button>
+                </div>
+
+                <div class="education-card">
+                    <div class="education-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>World Cuisines Exploration</h3>
+                    <p>
+                        Explore authentic recipes and techniques from cuisines around the world. Learn about 
+                        cultural food traditions and regional cooking styles.
+                    </p>
+                    <div class="course-info">
+                        <div class="info-item">
+                            <i class="fas fa-clock"></i>
+                            <span>16 hours</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-map"></i>
+                            <span>12 countries</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-users"></i>
+                            <span>Community</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary">Explore</button>
+                </div>
+            </div>
+        </div>
+    </section>
+<br>
+    <!-- Kitchen Tools & Equipment -->
+    <section class="kitchen-tools">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center;">Kitchen Tools & Equipment Guides</h2>
+            <div class="tools-grid">
+                <div class="tool-category">
+                    <div class="tool-icon">
+                        <i class="fas fa-cut"></i>
+                    </div>
+                    <h3>Knives & Cutting Tools</h3>
+                    <ul class="tool-list">
+                        <li><a href="#">Chef's Knife Selection Guide</a></li>
+                        <li><a href="#">Cutting Board Maintenance</a></li>
+                        <li><a href="#">Sharpening Techniques</a></li>
+                        <li><a href="#">Specialty Knives Overview</a></li>
+                    </ul>
+                </div>
+
+                <div class="tool-category">
+                    <div class="tool-icon">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <h3>Cookware & Bakeware</h3>
+                    <ul class="tool-list">
+                        <li><a href="#">Pan Types & Uses</a></li>
+                        <li><a href="#">Oven Selection Guide</a></li>
+                        <li><a href="#">Baking Equipment Essentials</a></li>
+                        <li><a href="#">Cast Iron Care</a></li>
+                    </ul>
+                </div>
+
+                <div class="tool-category">
+                    <div class="tool-icon">
+                        <i class="fas fa-blender"></i>
+                    </div>
+                    <h3>Small Appliances</h3>
+                    <ul class="tool-list">
+                        <li><a href="#">Stand Mixer Buying Guide</a></li>
+                        <li><a href="#">Food Processor Techniques</a></li>
+                        <li><a href="#">Blender Comparison</a></li>
+                        <li><a href="#">Specialty Appliances</a></li>
+                    </ul>
+                </div>
+
+                <div class="tool-category">
+                    <div class="tool-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3>Essential Utensils</h3>
+                    <ul class="tool-list">
+                        <li><a href="#">Measuring Tools Guide</a></li>
+                        <li><a href="#">Mixing & Stirring Tools</a></li>
+                        <li><a href="#">Specialty Utensils</a></li>
+                        <li><a href="#">Tool Maintenance Tips</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+<br>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-utensils"></i>
+                        <span>FoodFusion</span>
+                    </div>
+                    <p>Connecting food enthusiasts worldwide through the art of cooking and culinary creativity.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-link" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="recipes.html">Recipe Collection</a></li>
+                        <li><a href="community.html">Community Cookbook</a></li>
+                        <li><a href="resources.html">Culinary Resources</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">Disclaimer</a></li>
+                        <li><a href="#">GDPR Compliance</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Newsletter</h3>
+                    <p>Get the latest recipes and cooking tips delivered to your inbox.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 FoodFusion. All rights reserved. Made with <i class="fas fa-heart"></i> for food lovers everywhere.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Resources page functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Download buttons
+            document.querySelectorAll('.download-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const resource = this.dataset.resource;
+                    // Simulate download
+                    this.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Downloading...';
+                    this.disabled = true;
+                    
+                    setTimeout(() => {
+                        this.innerHTML = '<i class="fas fa-check"></i> Downloaded!';
+                        setTimeout(() => {
+                            this.innerHTML = '<i class="fas fa-download"></i> Download PDF';
+                            this.disabled = false;
+                        }, 2000);
+                    }, 1500);
+                });
+            });
+            
+            // Video play buttons
+            document.querySelectorAll('.play-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const video = this.dataset.video;
+                    alert(`Video player would open: ${video} tutorial`);
+                });
+            });
+            
+            // Recipe scaler tool
+            const scalerModal = document.getElementById('scalerModal');
+            const openScaler = document.getElementById('openScaler');
+            const closeScaler = document.getElementById('closeScaler');
+            const originalServings = document.getElementById('originalServings');
+            const desiredServings = document.getElementById('desiredServings');
+            const scalingFactor = document.getElementById('scalingFactor');
+            
+            openScaler.addEventListener('click', function() {
+                scalerModal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+            
+            closeScaler.addEventListener('click', function() {
+                scalerModal.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+            
+            function updateScaling() {
+                const original = parseFloat(originalServings.value) || 1;
+                const desired = parseFloat(desiredServings.value) || 1;
+                const factor = desired / original;
+                
+                scalingFactor.textContent = factor.toFixed(1) + 'x';
+                
+                // Update sample ingredients
+                const ingredients = [
+                    { original: '2 cups flour', base: 2, unit: 'cups', item: 'flour' },
+                    { original: '1 tsp salt', base: 1, unit: 'tsp', item: 'salt' },
+                    { original: '3 eggs', base: 3, unit: '', item: 'eggs' }
+                ];
+                
+                const scaledAmounts = document.querySelectorAll('.scaled-amount');
+                ingredients.forEach((ing, index) => {
+                    const scaledValue = (ing.base * factor).toFixed(ing.base % 1 === 0 ? 0 : 1);
+                    scaledAmounts[index].textContent = `→ ${scaledValue} ${ing.unit} ${ing.item}`.trim();
+                });
+            }
+            
+            originalServings.addEventListener('input', updateScaling);
+            desiredServings.addEventListener('input', updateScaling);
+            
+            // Other tool buttons
+            document.getElementById('openTimer').addEventListener('click', function() {
+                alert('Cooking timer tool would open here');
+            });
+            
+            document.getElementById('openConverter').addEventListener('click', function() {
+                alert('Unit converter tool would open here');
+            });
+            
+            document.getElementById('openNutrition').addEventListener('click', function() {
+                alert('Nutrition calculator tool would open here');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - FoodFusion</title>
+    <meta name="description" content="Get in touch with the FoodFusion team. Send us your enquiries, recipe requests, feedback, or partnership proposals.">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <i class="fas fa-utensils"></i>
+                    <span>FoodFusion</span>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="recipes.html" class="nav-link">Recipes</a>
+                </li>
+                <li class="nav-item">
+                    <a href="community.html" class="nav-link">Community</a>
+                </li>
+                <li class="nav-item">
+                    <a href="resources.html" class="nav-link">Resources</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link active">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a href="login.html" class="nav-link login-btn">Login</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p class="page-subtitle">We'd love to hear from you</p>
+        </div>
+    </section>
+
+    
+    <!-- Contact Information -->
+     <br>
+    <section class="contact-info">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email Us</h3>
+                    <p>Get in touch via email for general inquiries, recipe submissions, or partnership opportunities.</p>
+                    <a href="mailto:hello@foodfusion.com" class="contact-link">hello@foodfusion.com</a>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>Call Us</h3>
+                    <p>Speak with our team directly for urgent matters or detailed discussions about collaborations.</p>
+                    <a href="tel:+1-555-FOOD-123" class="contact-link">+1 (555) FOOD-123</a>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Visit Us</h3>
+                    <p>Stop by our culinary studio and test kitchen for workshops, events, and recipe testing sessions.</p>
+                    <address class="contact-address">
+                        123 Culinary Street<br>
+                        Food District, NY 10001<br>
+                        United States
+                    </address>
+                </div>
+            </div>
+        </div>
+    </section>
+<br>
+    <!-- Contact Form -->
+    <section class="contact-form-section">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-form-container">
+                    <h2 class="section-title">Send Us a Message</h2>
+                    <p class="section-description">
+                        Whether you have a question about recipes, want to share feedback, or are interested in 
+                        collaborating with us, we're here to help. Fill out the form below and we'll get back to you soon.
+                    </p>
+                    
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name *</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name *</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Select a subject</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="recipe">Recipe Question</option>
+                                <option value="feedback">Feedback</option>
+                                <option value="collaboration">Collaboration</option>
+                                <option value="technical">Technical Support</option>
+                                <option value="press">Press Inquiry</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="6" required placeholder="Tell us how we can help you..."></textarea>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="newsletter" name="newsletter">
+                                <span class="checkmark"></span>
+                                Subscribe to our newsletter for the latest recipes and culinary tips
+                            </label>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="privacy" name="privacy" required>
+                                <span class="checkmark"></span>
+                                I agree to the <a href="#">Privacy Policy</a> and consent to the processing of my personal data
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="contact-sidebar">
+                    <div class="contact-hours">
+                        <h3>Business Hours</h3>
+                        <div class="hours-list">
+                            <div class="hours-item">
+                                <span class="day">Monday - Friday</span>
+                                <span class="time">9:00 AM - 6:00 PM EST</span>
+                            </div>
+                            <div class="hours-item">
+                                <span class="day">Saturday</span>
+                                <span class="time">10:00 AM - 4:00 PM EST</span>
+                            </div>
+                            <div class="hours-item">
+                                <span class="day">Sunday</span>
+                                <span class="time">Closed</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-faq">
+                        <h3>Quick Answers</h3>
+                        <div class="faq-list">
+                            <details class="faq-item">
+                                <summary>How do I submit a recipe?</summary>
+                                <p>You can submit recipes through our Community page by clicking "Share Your Recipe" or by emailing us directly.</p>
+                            </details>
+                            <details class="faq-item">
+                                <summary>Can I suggest recipe modifications?</summary>
+                                <p>Absolutely! We love hearing about your recipe adaptations. Share them in the comments or contact us directly.</p>
+                            </details>
+                            <details class="faq-item">
+                                <summary>Do you offer cooking classes?</summary>
+                                <p>Yes! Check our events section for upcoming virtual and in-person cooking workshops.</p>
+                            </details>
+                            <details class="faq-item">
+                                <summary>How can I collaborate with FoodFusion?</summary>
+                                <p>We're always open to collaborations with chefs, food bloggers, and culinary brands. Contact us with your proposal!</p>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<br>
+    <!-- Response Expectations -->
+    <section class="response-info">
+        <div class="container">
+            <div class="response-content">
+                <h2 class="section-title" style="text-align: center;">What to Expect</h2>
+                <div class="response-grid">
+                    <div class="response-item">
+                        <div class="response-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3>Quick Response</h3>
+                        <p>We typically respond to all inquiries within 24-48 hours during business days.</p>
+                    </div>
+                    
+                    <div class="response-item">
+                        <div class="response-icon">
+                            <i class="fas fa-user-friends"></i>
+                        </div>
+                        <h3>Personal Touch</h3>
+                        <p>Every message is read by our team members who are passionate about food and cooking.</p>
+                    </div>
+                    
+                    <div class="response-item">
+                        <div class="response-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3>Helpful Solutions</h3>
+                        <p>We provide detailed, helpful responses tailored to your specific needs and questions.</p>
+                    </div>
+                    
+                    <div class="response-item">
+                        <div class="response-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Privacy Protected</h3>
+                        <p>Your contact information is kept secure and only used to respond to your inquiry.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<br>
+    <!-- Alternative Contact Methods -->
+    <section class="alt-contact">
+        <div class="container">
+            <h2 class="section-title"style="text-align: center;">Other Ways to Connect</h2>
+            <div class="alt-contact-grid">
+                <div class="alt-contact-card">
+                    <div class="alt-icon">
+                        <i class="fab fa-discord"></i>
+                    </div>
+                    <h3>Join Our Discord</h3>
+                    <p>Connect with fellow food enthusiasts in real-time discussions about recipes, techniques, and cooking tips.</p>
+                    <a href="#" class="btn btn-outline">Join Community</a>
+                </div>
+                
+                <div class="alt-contact-card">
+                    <div class="alt-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3>Book a Consultation</h3>
+                    <p>Schedule a one-on-one video call with our culinary experts for personalized cooking advice and recipe development.</p>
+                    <a href="#" class="btn btn-outline">Schedule Call</a>
+                </div>
+                
+                <div class="alt-contact-card">
+                    <div class="alt-icon">
+                        <i class="fas fa-rss"></i>
+                    </div>
+                    <h3>Subscribe to Updates</h3>
+                    <p>Stay informed about new recipes, cooking events, and community features by subscribing to our newsletter.</p>
+                    <a href="#" class="btn btn-outline">Subscribe Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+<br>
+    <!-- Location Map -->
+    <section class="location-map">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center;">Find Our Studio</h2>
+            <div class="map-container">
+                <div class="map-placeholder">
+                    <div class="map-content">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <h3>FoodFusion Culinary Studio</h3>
+                        <p>123 Culinary Street, Food District, NY 10001</p>
+                        <div class="map-directions">
+                            <a href="#" class="btn btn-outline">Get Directions</a>
+                            <a href="#" class="btn btn-primary">Schedule Visit</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="location-details">
+                    <h3>Studio Features</h3>
+                    <ul class="features-list">
+                        <li><i class="fas fa-check"></i> Professional-grade kitchen equipment</li>
+                        <li><i class="fas fa-check"></i> Video recording capabilities for tutorials</li>
+                        <li><i class="fas fa-check"></i> Workshop and event space</li>
+                        <li><i class="fas fa-check"></i> Recipe testing laboratory</li>
+                        <li><i class="fas fa-check"></i> Parking available</li>
+                        <li><i class="fas fa-check"></i> Wheelchair accessible</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+<br>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-utensils"></i>
+                        <span>FoodFusion</span>
+                    </div>
+                    <p>Connecting food enthusiasts worldwide through the art of cooking and culinary creativity.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-link" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="recipes.html">Recipe Collection</a></li>
+                        <li><a href="community.html">Community Cookbook</a></li>
+                        <li><a href="resources.html">Culinary Resources</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">Disclaimer</a></li>
+                        <li><a href="#">GDPR Compliance</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Newsletter</h3>
+                    <p>Get the latest recipes and cooking tips delivered to your inbox.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 FoodFusion. All rights reserved. Made with <i class="fas fa-heart"></i> for food lovers everywhere.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/forms.js"></script>
+    <script>
+        // Contact page specific functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Character counter for message textarea
+            const messageTextarea = document.getElementById('message');
+            const charCount = document.getElementById('charCount');
+            const maxChars = 500;
+            
+            messageTextarea.addEventListener('input', function() {
+                const currentLength = this.value.length;
+                charCount.textContent = currentLength;
+                
+                if (currentLength > maxChars) {
+                    charCount.style.color = '#e74c3c';
+                    this.style.borderColor = '#e74c3c';
+                } else {
+                    charCount.style.color = '';
+                    this.style.borderColor = '';
+                }
+            });
+            
+            // FAQ accordion functionality
+            document.querySelectorAll('.faq-question').forEach(question => {
+                question.addEventListener('click', function() {
+                    const faqItem = this.parentNode;
+                    const answer = faqItem.querySelector('.faq-answer');
+                    const icon = this.querySelector('i');
+                    
+                    if (faqItem.classList.contains('active')) {
+                        faqItem.classList.remove('active');
+                        answer.style.maxHeight = null;
+                        icon.style.transform = 'rotate(0deg)';
+                    } else {
+                        // Close other open FAQ items
+                        document.querySelectorAll('.faq-item.active').forEach(item => {
+                            item.classList.remove('active');
+                            item.querySelector('.faq-answer').style.maxHeight = null;
+                            item.querySelector('i').style.transform = 'rotate(0deg)';
+                        });
+                        
+                        faqItem.classList.add('active');
+                        answer.style.maxHeight = answer.scrollHeight + 'px';
+                        icon.style.transform = 'rotate(180deg)';
+                    }
+                });
+            });
+            
+            // Live chat button
+            document.getElementById('liveChatBtn').addEventListener('click', function() {
+                alert('Live chat feature would be implemented with a third-party service like Intercom or Zendesk.');
+            });
+            
+            // Contact form submission
+            document.getElementById('contactForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const submitBtn = this.querySelector('button[type="submit"]');
+                const btnText = submitBtn.querySelector('.btn-text');
+                const btnLoading = submitBtn.querySelector('.btn-loading');
+                
+                // Show loading state
+                btnText.style.display = 'none';
+                btnLoading.style.display = 'inline-flex';
+                submitBtn.disabled = true;
+                
+                // Simulate form submission
+                setTimeout(() => {
+                    // Hide loading state
+                    btnText.style.display = 'inline';
+                    btnLoading.style.display = 'none';
+                    submitBtn.disabled = false;
+                    
+                    // Show success modal
+                    document.getElementById('successModal').classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                    
+                    // Reset form
+                    this.reset();
+                    charCount.textContent = '0';
+                }, 2000);
+            });
+            
+            // Success modal close
+            document.getElementById('closeSuccessModal').addEventListener('click', function() {
+                document.getElementById('successModal').classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+    </script>
+</body>
+</html>

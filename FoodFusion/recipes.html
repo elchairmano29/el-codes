@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Collection - FoodFusion</title>
+    <meta name="description" content="Explore our curated collection of diverse recipes from around the world, categorized by cuisine type, dietary preferences, and cooking difficulty.">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <i class="fas fa-utensils"></i>
+                    <span>FoodFusion</span>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="recipes.html" class="nav-link active">Recipes</a>
+                </li>
+                <li class="nav-item">
+                    <a href="community.html" class="nav-link">Community</a>
+                </li>
+                <li class="nav-item">
+                    <a href="resources.html" class="nav-link">Resources</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a href="login.html" class="nav-link login-btn">Login</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Recipe Collection</h1>
+            <p class="page-subtitle">Discover flavors from around the world</p>
+        </div>
+    </section>
+<br>
+    <!-- Search and Filter Section -->
+    <section class="recipe-filters">
+        <div class="container">
+            <div class="filter-header" style="text-align: center;">
+                <h2>Find Your Perfect Recipe</h2>
+                <p>Browse our curated collection of over 12,000 tested recipes</p>
+            </div>
+            
+            <div class="search-bar">
+                <div class="search-input-wrapper">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="recipeSearch" placeholder="Search for recipes, ingredients, or techniques...">
+                </div>
+                <br>
+                <button class="btn btn-primary" id="searchBtn">Search</button>
+            </div>
+            <br>
+            <div class="filter-tabs">
+                <button class="filter-tab active btn btn-outline" data-filter="all">All Recipes</button>
+                <button class="filter-tab btn btn-outline" data-filter="cuisine">By Cuisine</button>
+                <button class="filter-tab btn btn-outline" data-filter="dietary">Dietary Preferences</button>
+                <button class="filter-tab btn btn-outline" data-filter="difficulty">Difficulty Level</button>
+                <button class="filter-tab btn btn-outline" data-filter="time">Cooking Time</button>
+            </div>
+            <br>
+            <div class="filter-content">
+                <div class="filter-section active" id="filter-all">
+                    <div class="filter-grid">
+                        <button class="filter-btn btn btn-outline" data-category="featured">Featured</button>
+                        <button class="filter-btn btn btn-outline" data-category="trending">Trending</button>
+                        <button class="filter-btn btn btn-outline" data-category="seasonal">Seasonal</button>
+                        <button class="filter-btn btn btn-outline" data-category="quick">Quick & Easy</button>
+                    </div>
+                </div>
+                <br>
+                <div class="filter-section" id="filter-cuisine">
+                    <div class="filter-grid">
+                        <button class="filter-btn btn btn-outline" data-category="italian">Italian</button>
+                        <button class="filter-btn btn btn-outline" data-category="asian">Asian</button>
+                        <button class="filter-btn btn btn-outline" data-category="mediterranean">Mediterranean</button>
+                        <button class="filter-btn btn btn-outline" data-category="mexican">Mexican</button>
+                        <button class="filter-btn btn btn-outline" data-category="indian">Indian</button>
+                        <button class="filter-btn btn btn-outline" data-category="french">French</button>
+                        <button class="filter-btn btn btn-outline" data-category="middle-eastern">Middle Eastern</button>
+                        <button class="filter-btn btn btn-outline" data-category="american">American</button>
+                    </div>
+                </div>
+                <br>
+                
+                <div class="filter-section" id="filter-dietary">
+                    <div class="filter-grid">
+                        <button class="filter-btn btn btn-outline" data-category="vegetarian">Vegetarian</button>
+                        <button class="filter-btn btn btn-outline" data-category="vegan">Vegan</button>
+                        <button class="filter-btn btn btn-outline" data-category="gluten-free">Gluten-Free</button>
+                        <button class="filter-btn btn btn-outline" data-category="keto">Keto</button>
+                        <button class="filter-btn btn btn-outline" data-category="paleo">Paleo</button>
+                        <button class="filter-btn btn btn-outline" data-category="dairy-free">Dairy-Free</button>
+                        <button class="filter-btn btn btn-outline" data-category="low-carb">Low-Carb</button>
+                        <button class="filter-btn btn btn-outline" data-category="heart-healthy">Heart-Healthy</button>
+                    </div>
+                </div>
+                <br>
+                <div class="filter-section" id="filter-difficulty">
+                    <div class="filter-grid">
+                        <button class="filter-btn btn btn-outline" data-category="beginner">Beginner</button>
+                        <button class="filter-btn btn btn-outline" data-category="intermediate">Intermediate</button>
+                        <button class="filter-btn btn btn-outline" data-category="advanced">Advanced</button>
+                        <button class="filter-btn btn btn-outline" data-category="expert">Expert</button>
+                    </div>
+                </div>
+                <br>
+                <div class="filter-section" id="filter-time">
+                    <div class="filter-grid">
+                        <button class="filter-btn btn btn-outline" data-category="under-15">Under 15 min</button>
+                        <button class="filter-btn btn btn-outline" data-category="15-30">15-30 min</button>
+                        <button class="filter-btn btn btn-outline" data-category="30-60">30-60 min</button>
+                        <button class="filter-btn btn btn-outline" data-category="over-60">Over 1 hour</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<br>
+    <!-- Featured Recipes -->
+    <section class="featured-recipes">
+        <div class="container">
+            <h2 style="text-align: center;">Featured Recipes</h2>
+            <div class="recipe-grid">
+                <div class="recipe-card featured">
+                    <div class="recipe-image">
+                        <div class="placeholder-image">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <div class="recipe-badge">Featured</div>
+                        <button class="recipe-favorite">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                    <div class="recipe-content">
+                        <div class="recipe-meta">
+                            <span class="recipe-difficulty beginner">Beginner</span>
+                            <span class="recipe-time"><i class="fas fa-clock"></i> 25 min</span>
+                        </div>
+                        <h3>Mediterranean Quinoa Bowl</h3>
+                        <p>A vibrant, nutrient-packed bowl featuring fluffy quinoa, roasted vegetables, creamy hummus, and fresh herbs with a tangy lemon-tahini dressing.</p>
+                        <div class="recipe-tags">
+                            <span class="tag">Vegetarian</span>
+                            <span class="tag">Gluten-Free</span>
+                            <span class="tag">Healthy</span>
+                        </div>
+                        <div class="recipe-stats">
+                            <div class="recipe-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span class="rating-text">4.9 (247 reviews)</span>
+                            </div>
+                            <span class="recipe-author">By Chef Maria</span>
+                        </div>
+                        <button class="btn btn-primary btn-full">View Recipe</button>
+                    </div>
+                </div>
+
+                <div class="recipe-card">
+                    <div class="recipe-image">
+                        <div class="placeholder-image">
+                            <i class="fas fa-fish"></i>
+                        </div>
+                        <button class="recipe-favorite">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                    <div class="recipe-content">
+                        <div class="recipe-meta">
+                            <span class="recipe-difficulty intermediate">Intermediate</span>
+                            <span class="recipe-time"><i class="fas fa-clock"></i> 45 min</span>
+                        </div>
+                        <h3>Pan-Seared Salmon with Herb Crust</h3>
+                        <p>Perfectly cooked salmon fillet with a crispy herb and breadcrumb crust, served with roasted asparagus and lemon butter sauce.</p>
+                        <div class="recipe-tags">
+                            <span class="tag">Seafood</span>
+                            <span class="tag">Keto</span>
+                            <span class="tag">High-Protein</span>
+                        </div>
+                        <div class="recipe-stats">
+                            <div class="recipe-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <span class="rating-text">4.7 (189 reviews)</span>
+                            </div>
+                            <span class="recipe-author">By Chef David</span>
+                        </div>
+                        <button class="btn btn-primary btn-full">View Recipe</button>
+                    </div>
+                </div>
+
+                <div class="recipe-card">
+                    <div class="recipe-image">
+                        <div class="placeholder-image">
+                            <i class="fas fa-bread-slice"></i>
+                        </div>
+                        <button class="recipe-favorite">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                    <div class="recipe-content">
+                        <div class="recipe-meta">
+                            <span class="recipe-difficulty advanced">Advanced</span>
+                            <span class="recipe-time"><i class="fas fa-clock"></i> 4 hours</span>
+                        </div>
+                        <h3>Artisan Sourdough Bread</h3>
+                        <p>Learn the ancient art of sourdough baking with this comprehensive guide to creating the perfect loaf with a crispy crust and airy crumb.</p>
+                        <div class="recipe-tags">
+                            <span class="tag">Vegetarian</span>
+                            <span class="tag">Artisan</span>
+                            <span class="tag">Traditional</span>
+                        </div>
+                        <div class="recipe-stats">
+                            <div class="recipe-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span class="rating-text">4.8 (312 reviews)</span>
+                            </div>
+                            <span class="recipe-author">By James Wilson</span>
+                        </div>
+                        <button class="btn btn-primary btn-full">View Recipe</button>
+                    </div>
+                </div>
+
+                <div class="recipe-card">
+                    <div class="recipe-image">
+                        <div class="placeholder-image">
+                            <i class="fas fa-pepper-hot"></i>
+                        </div>
+                        <button class="recipe-favorite">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                    <div class="recipe-content">
+                        <div class="recipe-meta">
+                            <span class="recipe-difficulty beginner">Beginner</span>
+                            <span class="recipe-time"><i class="fas fa-clock"></i> 20 min</span>
+                        </div>
+                        <h3>Spicy Thai Basil Stir-Fry</h3>
+                        <p>Quick and flavorful stir-fry with fresh Thai basil, chilies, and your choice of protein. Perfect for busy weeknight dinners.</p>
+                        <div class="recipe-tags">
+                            <span class="tag">Asian</span>
+                            <span class="tag">Spicy</span>
+                            <span class="tag">Quick</span>
+                        </div>
+                        <div class="recipe-stats">
+                            <div class="recipe-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <span class="rating-text">4.5 (156 reviews)</span>
+                            </div>
+                            <span class="recipe-author">By Sarah Chen</span>
+                        </div>
+                        <button class="btn btn-primary btn-full">View Recipe</button>
+                    </div>
+                </div>
+
+                <div class="recipe-card">
+                    <div class="recipe-image">
+                        <div class="placeholder-image">
+                            <i class="fas fa-cookie"></i>
+                        </div>
+                        <button class="recipe-favorite">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                    <div class="recipe-content">
+                        <div class="recipe-meta">
+                            <span class="recipe-difficulty intermediate">Intermediate</span>
+                            <span class="recipe-time"><i class="fas fa-clock"></i> 2 hours</span>
+                        </div>
+                        <h3>Classic French Macarons</h3>
+                        <p>Master the delicate art of macaron making with this detailed recipe and troubleshooting guide for perfect shells every time.</p>
+                        <div class="recipe-tags">
+                            <span class="tag">Dessert</span>
+                            <span class="tag">French</span>
+                            <span class="tag">Gluten-Free</span>
+                        </div>
+                        <div class="recipe-stats">
+                            <div class="recipe-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span class="rating-text">4.9 (423 reviews)</span>
+                            </div>
+                            <span class="recipe-author">By Emily Foster</span>
+                        </div>
+                        <button class="btn btn-primary btn-full">View Recipe</button>
+                    </div>
+                </div>
+
+                <div class="recipe-card">
+                    <div class="recipe-image">
+                        <div class="placeholder-image">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <button class="recipe-favorite">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                    <div class="recipe-content">
+                        <div class="recipe-meta">
+                            <span class="recipe-difficulty beginner">Beginner</span>
+                            <span class="recipe-time"><i class="fas fa-clock"></i> 15 min</span>
+                        </div>
+                        <h3>Green Goddess Smoothie Bowl</h3>
+                        <p>Nutrient-dense smoothie bowl packed with spinach, avocado, and tropical fruits, topped with crunchy seeds and fresh berries.</p>
+                        <div class="recipe-tags">
+                            <span class="tag">Vegan</span>
+                            <span class="tag">Healthy</span>
+                            <span class="tag">Breakfast</span>
+                        </div>
+                        <div class="recipe-stats">
+                            <div class="recipe-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <span class="rating-text">4.6 (203 reviews)</span>
+                            </div>
+                            <span class="recipe-author">By Dr. Emily</span>
+                        </div>
+                        <button class="btn btn-primary btn-full">View Recipe</button>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="load-more-section">
+                <button class="btn btn-outline btn-large" id="loadMoreRecipes">
+                    Load More Recipes
+                    <i class="fas fa-arrow-down"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+<br>
+     <!-- Recipe Categories -->
+     <section class="recipe-categories">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center;">Browse by Category</h2>
+            <div class="categories-grid">
+                <a href="#" class="category-card" data-category="breakfast">
+                    <div class="category-icon">
+                        <i class="fas fa-coffee"></i>
+                    </div>
+                    <h3>Breakfast & Brunch</h3>
+                    <span class="category-count">234 recipes</span>
+                </a>
+                
+                <a href="#" class="category-card" data-category="appetizers">
+                    <div class="category-icon">
+                        <i class="fas fa-cheese"></i>
+                    </div>
+                    <h3>Appetizers & Snacks</h3>
+                    <span class="category-count">187 recipes</span>
+                </a>
+                
+                <a href="#" class="category-card" data-category="main-dishes">
+                    <div class="category-icon">
+                        <i class="fas fa-drumstick-bite"></i>
+                    </div>
+                    <h3>Main Dishes</h3>
+                    <span class="category-count">456 recipes</span>
+                </a>
+                
+                <a href="#" class="category-card" data-category="soups">
+                    <div class="category-icon">
+                        <i class="fas fa-bowl-hot"></i>
+                    </div>
+                    <h3>Soups & Stews</h3>
+                    <span class="category-count">145 recipes</span>
+                </a>
+                
+                <a href="#" class="category-card" data-category="salads">
+                    <div class="category-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Salads & Sides</h3>
+                    <span class="category-count">198 recipes</span>
+                </a>
+                
+                <a href="#" class="category-card" data-category="desserts">
+                    <div class="category-icon">
+                        <i class="fas fa-birthday-cake"></i>
+                    </div>
+                    <h3>Desserts & Sweets</h3>
+                    <span class="category-count">312 recipes</span>
+                </a>
+                
+                <a href="#" class="category-card" data-category="beverages">
+                    <div class="category-icon">
+                        <i class="fas fa-glass-cheers"></i>
+                    </div>
+                    <h3>Beverages</h3>
+                    <span class="category-count">89 recipes</span>
+                </a>
+                
+                <a href="#" class="category-card" data-category="baking">
+                    <div class="category-icon">
+                        <i class="fas fa-bread-slice"></i>
+                    </div>
+                    <h3>Baking & Bread</h3>
+                    <span class="category-count">167 recipes</span>
+                </a>
+            </div>
+        </div>
+    </section>
+<br>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-utensils"></i>
+                        <span>FoodFusion</span>
+                    </div>
+                    <p>Connecting food enthusiasts worldwide through the art of cooking and culinary creativity.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-link" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="recipes.html">Recipe Collection</a></li>
+                        <li><a href="community.html">Community Cookbook</a></li>
+                        <li><a href="resources.html">Culinary Resources</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">Disclaimer</a></li>
+                        <li><a href="#">GDPR Compliance</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Newsletter</h3>
+                    <p>Get the latest recipes and cooking tips delivered to your inbox.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 FoodFusion. All rights reserved. Made with <i class="fas fa-heart"></i> for food lovers everywhere.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Recipe filtering functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterTabs = document.querySelectorAll('.filter-tab');
+            const filterSections = document.querySelectorAll('.filter-section');
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const recipeCards = document.querySelectorAll('.recipe-card');
+            
+            // Tab switching
+            filterTabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    const filter = this.dataset.filter;
+                    
+                    filterTabs.forEach(t => t.classList.remove('active'));
+                    filterSections.forEach(s => s.classList.remove('active'));
+                    
+                    this.classList.add('active');
+                    document.getElementById(`filter-${filter}`).classList.add('active');
+                });
+            });
+            
+            // Filter button functionality
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const category = this.dataset.category;
+                    
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // This would filter recipes in a real application
+                    console.log(`Filtering by category: ${category}`);
+                });
+            });
+            
+            // Favorite button functionality
+            document.querySelectorAll('.recipe-favorite').forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const icon = this.querySelector('i');
+                    if (icon.classList.contains('far')) {
+                        icon.classList.remove('far');
+                        icon.classList.add('fas');
+                        this.classList.add('favorited');
+                    } else {
+                        icon.classList.remove('fas');
+                        icon.classList.add('far');
+                        this.classList.remove('favorited');
+                    }
+                });
+            });
+            
+            // Load more recipes
+            document.getElementById('loadMoreRecipes').addEventListener('click', function() {
+                // This would load more recipes in a real application
+                this.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Loading...';
+                setTimeout(() => {
+                    this.innerHTML = 'Load More Recipes <i class="fas fa-arrow-down"></i>';
+                }, 1000);
+            });
+        });
+    </script>
+</body>
+</html>
